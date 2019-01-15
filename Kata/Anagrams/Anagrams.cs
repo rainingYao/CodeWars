@@ -36,13 +36,13 @@
         private static List<string> solution(string word, List<string> words)
         {
             // Hash of the count of each character in word
-            Dictionary<char, int> wordCount = word.GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count(c => c == c));
+            Dictionary<char, int> wordCount = word.GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count(c => true));
 
             // Filter words due to the following predicate
             return words.Where(w =>
             {
                 // Hash of the count of each character of a word in words
-                Dictionary<char, int> wCount = w.GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count(c => c == c));
+                Dictionary<char, int> wCount = w.GroupBy(x => x).ToDictionary(g => g.Key, g => g.Count(c => true));
 
                 // Check if the two hashes are equal
                 return wCount.Count == wordCount.Count && !wCount.Except(wordCount).Any();

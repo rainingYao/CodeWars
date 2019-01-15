@@ -49,9 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Kata\Anagrams\Anagrams.cs" />
+    <Compile Include="Kata\BreakCamelCase\BreakCamelCase.cs" />
     <Compile Include="Kata\DeleteNth\DeleteNth.cs" />
     <Compile Include="Kata\DuplicateCount\DuplicateCount.cs" />
     <Compile Include="Kata\IsIsogram\IsIsogram.cs" />
+    <Compile Include="Kata\RPS\RPS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,10 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Kata\Anagrams\Anagrams.html" />
+    <Content Include="Kata\BreakCamelCase\BreakCamelCase.html" />
     <Content Include="Kata\DeleteNth\DeleteNth.html" />
     <Content Include="Kata\Details.html" />
     <Content Include="Kata\DuplicateCount\DuplicateCount.html" />
     <Content Include="Kata\IsIsogram\IsIsogram.html" />
+    <Content Include="Kata\RPS\RPS.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
