@@ -54,6 +54,7 @@
     <Compile Include="Kata\DuplicateCount\DuplicateCount.cs" />
     <Compile Include="Kata\IsIsogram\IsIsogram.cs" />
     <Compile Include="Kata\RPS\RPS.cs" />
+    <Compile Include="Kata\StepInPrimes\StepInPrimes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +68,7 @@
     <Content Include="Kata\DuplicateCount\DuplicateCount.html" />
     <Content Include="Kata\IsIsogram\IsIsogram.html" />
     <Content Include="Kata\RPS\RPS.html" />
+    <Content Include="Kata\StepInPrimes\StepInPrimes.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
