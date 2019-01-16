@@ -53,12 +53,16 @@
     <Compile Include="Kata\DeleteNth\DeleteNth.cs" />
     <Compile Include="Kata\DuplicateCount\DuplicateCount.cs" />
     <Compile Include="Kata\IsIsogram\IsIsogram.cs" />
+    <Compile Include="Kata\MazeRunner\Maze.cs" />
+    <Compile Include="Kata\MazeRunner\MazeRunner.cs" />
     <Compile Include="Kata\RPS\RPS.cs" />
     <Compile Include="Kata\StepInPrimes\StepInPrimes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Kata\MazeRunner\MazeRunner.md" />
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Kata\Anagrams\Anagrams.html" />
