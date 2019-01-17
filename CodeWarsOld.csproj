@@ -53,21 +53,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
     <Compile Include="Kata\DeleteNth\DeleteNth.cs" />
     <Compile Include="Kata\RPS\RPS.cs" />
+    <Compile Include="Kata\StepInPrimes\StepInPrimes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Kata\ConsecutiveStrings\ConsecutiveStrings.md" />
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Kata\DeleteNth\DeleteNth.html" />
-    <Content Include="Kata\Details.html" />
     <Content Include="Kata\RPS\RPS.html" />
+    <Content Include="Kata\StepInPrimes\StepInPrimes.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
