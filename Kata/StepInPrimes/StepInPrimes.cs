@@ -168,6 +168,15 @@
             }
             return null;
         }
+
+        //  筛选出所有合数i，并使 s[i]=true
+        //for (long i = 2; i < s.Length; i++)
+        //    if (!s[i]){
+         //                 for (long j = i * i; j < s.Length; j += i)
+        //                  s[j] = true;
+
+        //               }
+       
     }
 
     ///// .net 4.7

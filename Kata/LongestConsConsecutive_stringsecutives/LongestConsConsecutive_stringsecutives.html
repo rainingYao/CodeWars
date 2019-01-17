@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Delete occurrences of an element if it occurs more than n times</title>
+</head>
+<body>
+    <div class="markdown" id="description">
+        <p>Consider an array of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).</p>
+        <p>For example,</p>
+<pre style="display: none;"><code class="lang-javascript">[<span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span> ,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span> ,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span> ,
+        <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>]
+</code></pre>
+<pre style="display: none;"><code class="lang-python">[<span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">False</span>,
+        <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span> ,
+        <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">False</span>, <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">False</span>,
+        <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">True</span> ,
+        <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span> ,
+        <span class="hljs-keyword">False</span>, <span class="hljs-keyword">False</span>, <span class="hljs-keyword">True</span>,  <span class="hljs-keyword">True</span>]
+</code></pre>
+<pre><code class="lang-csharp">[<span class="hljs-meta">true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true</span>]
+</code></pre>
+<pre style="display: none;"><code class="lang-cpp">[<span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span> ,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span> ,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span> ,
+        <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>]
+</code></pre>
+<pre style="display: none;"><code class="lang-haskell">[<span class="hljs-type">True</span>,  <span class="hljs-type">True</span>,  <span class="hljs-type">True</span>,  <span class="hljs-type">False</span>,
+        <span class="hljs-type">True</span>,  <span class="hljs-type">True</span>,  <span class="hljs-type">True</span>,  <span class="hljs-type">True</span> ,
+        <span class="hljs-type">True</span>,  <span class="hljs-type">False</span>, <span class="hljs-type">True</span>,  <span class="hljs-type">False</span>,
+        <span class="hljs-type">True</span>,  <span class="hljs-type">False</span>, <span class="hljs-type">False</span>, <span class="hljs-type">True</span> ,
+        <span class="hljs-type">True</span>,  <span class="hljs-type">True</span>,  <span class="hljs-type">True</span>,  <span class="hljs-type">True</span> ,
+        <span class="hljs-type">False</span>, <span class="hljs-type">False</span>, <span class="hljs-type">True</span>,  <span class="hljs-type">True</span>]
+</code></pre>
+<pre style="display: none;"><code class="lang-elixir">[<span class="hljs-keyword">true</span>,  <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">false</span>,
+        <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">true</span> ,
+        <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">false</span>, <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">false</span>,
+        <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">false</span>, <span class="hljs-keyword">false</span>, <span class="hljs-keyword">true</span> ,
+        <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">true</span> ,
+        <span class="hljs-keyword">false</span>, <span class="hljs-keyword">false</span>, <span class="hljs-keyword">true</span>,  <span class="hljs-keyword">true</span>]
+</code></pre>
+<pre style="display: none;"><code class="lang-rust">&amp;[<span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span> ,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span> ,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span> ,
+        <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>]
+</code></pre>
+<pre style="display: none;"><code class="lang-scala"><span class="hljs-type">Array</span>(
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>,
+        <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>,
+        <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>,  <span class="hljs-literal">true</span>
+)
+</code></pre>
+        <p>The correct answer would be 17.</p>
+        <p>Hint: Don't forget to check for bad values like <code>null</code>/<code>undefined</code></p>
+    </div>
+    <a href="https://www.codewars.com/kata/54edbc7200b811e956000556">
+        原题链接：
+        https://www.codewars.com/kata/54edbc7200b811e956000556
+    </a>
+</body>
+</html>
