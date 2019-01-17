@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
     <Compile Include="Kata\DeleteNth\DeleteNth.cs" />
     <Compile Include="Kata\LongestConsConsecutive_stringsecutives\LongestConsConsecutive_stringsecutives.cs" />
     <Compile Include="Kata\LearnIEu.cs" />
@@ -62,7 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Kata\ConsecutiveStrings\ConsecutiveStrings.md" />
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
