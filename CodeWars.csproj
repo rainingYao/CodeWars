@@ -52,6 +52,8 @@
     <Compile Include="Kata\BreakCamelCase\BreakCamelCase.cs" />
     <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
     <Compile Include="Kata\DeleteNth\DeleteNth.cs" />
+    <None Include="Kata\Duplicate Encoder\README.md" />
+    <Compile Include="Kata\Duplicate Encoder\DuplicateEncode.cs" />
     <Compile Include="Kata\DuplicateCount\DuplicateCount.cs" />
     <Compile Include="Kata\IsIsogram\IsIsogram.cs" />
     <Compile Include="Kata\LongestConsConsecutive_stringsecutives\LongestConsConsecutive_stringsecutives.cs" />
