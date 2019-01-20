@@ -98,7 +98,6 @@
         {
             string longest = "";
             if (strarr.Length < k) return longest;
-            for (int i = 0; i < k; i++) longest += strarr[i];
             for (int i = 0; i < strarr.Length - k + 1; i++)
             {
                 string temp = "";

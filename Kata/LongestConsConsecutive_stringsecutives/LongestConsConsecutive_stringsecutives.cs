@@ -34,12 +34,13 @@
         static int i = 1;
         public static String LongestConsec(string[] strarr, int k)
         {
+            if (strarr.Length < k) return "";
             int idx = 0;
             int maxsum = 0;
             for (int i = 0; i < strarr.Length - k + 1; i++)
             {
                 int summ = 0;
-                for (int j = 0; j < k; j++)
+                for (int j = i; j < i + k; j++)
                 {
                     summ += strarr[j].Length;
                 }
@@ -50,7 +51,7 @@
                 }
             }
             string ans = "";
-            for (int j = idx; j < k; j++)
+            for (int j = idx; j < idx + k; j++)
             {
                 ans += strarr[j];
             }

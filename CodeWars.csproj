@@ -50,17 +50,23 @@
   <ItemGroup>
     <Compile Include="Kata\Anagrams\Anagrams.cs" />
     <Compile Include="Kata\BreakCamelCase\BreakCamelCase.cs" />
+    <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
     <Compile Include="Kata\DeleteNth\DeleteNth.cs" />
     <Compile Include="Kata\DuplicateCount\DuplicateCount.cs" />
     <Compile Include="Kata\IsIsogram\IsIsogram.cs" />
+    <Compile Include="Kata\LongestConsConsecutive_stringsecutives\LongestConsConsecutive_stringsecutives.cs" />
     <Compile Include="Kata\MazeRunner\Maze.cs" />
     <Compile Include="Kata\MazeRunner\MazeRunner.cs" />
+    <Compile Include="Kata\Primes in numbers\PrimeDecomp.cs" />
     <Compile Include="Kata\RPS\RPS.cs" />
     <Compile Include="Kata\StepInPrimes\StepInPrimes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Kata\ConsecutiveStrings\README.md" />
     <None Include="Kata\MazeRunner\MazeRunner.md" />
+    <None Include="Kata\Primes in numbers\README.md" />
+    <None Include="Kata\README.md" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
@@ -71,6 +77,7 @@
     <Content Include="Kata\Details.html" />
     <Content Include="Kata\DuplicateCount\DuplicateCount.html" />
     <Content Include="Kata\IsIsogram\IsIsogram.html" />
+    <Content Include="Kata\LongestConsConsecutive_stringsecutives\LongestConsConsecutive_stringsecutives.html" />
     <Content Include="Kata\RPS\RPS.html" />
     <Content Include="Kata\StepInPrimes\StepInPrimes.html" />
   </ItemGroup>
