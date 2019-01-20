@@ -55,6 +55,8 @@
     <None Include="Kata\Duplicate Encoder\README.md" />
     <Compile Include="Kata\Duplicate Encoder\DuplicateEncode.cs" />
     <Compile Include="Kata\DuplicateCount\DuplicateCount.cs" />
+    <None Include="Kata\Integer depth\README.md" />
+    <Compile Include="Kata\Integer depth\IntegerDepth.cs" />
     <Compile Include="Kata\IsIsogram\IsIsogram.cs" />
     <Compile Include="Kata\LongestConsConsecutive_stringsecutives\LongestConsConsecutive_stringsecutives.cs" />
     <Compile Include="Kata\MazeRunner\Maze.cs" />
@@ -76,7 +78,6 @@
     <Content Include="Kata\Anagrams\Anagrams.html" />
     <Content Include="Kata\BreakCamelCase\BreakCamelCase.html" />
     <Content Include="Kata\DeleteNth\DeleteNth.html" />
-    <Content Include="Kata\Details.html" />
     <Content Include="Kata\DuplicateCount\DuplicateCount.html" />
     <Content Include="Kata\IsIsogram\IsIsogram.html" />
     <Content Include="Kata\LongestConsConsecutive_stringsecutives\LongestConsConsecutive_stringsecutives.html" />
