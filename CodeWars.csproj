@@ -62,6 +62,7 @@
     <Compile Include="Kata\LongestConsConsecutive_stringsecutives\LongestConsConsecutive_stringsecutives.cs" />
     <Compile Include="Kata\MazeRunner\Maze.cs" />
     <Compile Include="Kata\MazeRunner\MazeRunner.cs" />
+    <Compile Include="Kata\PI approximation\PiApprox.cs" />
     <Compile Include="Kata\Primes in numbers\PrimeDecomp.cs" />
     <Compile Include="Kata\RPS\RPS.cs" />
     <Compile Include="Kata\StepInPrimes\StepInPrimes.cs" />
@@ -71,6 +72,7 @@
     <None Include="Kata\ConsecutiveStrings\README.md" />
     <None Include="Kata\Integer triangles\README.md" />
     <None Include="Kata\MazeRunner\MazeRunner.md" />
+    <None Include="Kata\PI approximation\README.md" />
     <None Include="Kata\Primes in numbers\README.md" />
     <None Include="Kata\README.md" />
     <None Include="packages.config" />

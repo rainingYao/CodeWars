@@ -4,6 +4,7 @@
 |<6 kyu> [Duplicate Encoder]|[/Duplicate Encoder]|
 |<6 kyu> [Integer depth]|[/Integer depth]|
 |<5 kyu> [Integer triangles]|[/Integer triangles]|
+|<6 kyu> [PI approximation ]|[/PI approximation]|
 
 
 [Primes in numbers]: https://www.codewars.com/kata/54d512e62a5e54c96200019e
@@ -14,3 +15,5 @@
 [/Integer depth]: Integer%20depth
 [Integer triangles]: https://www.codewars.com/kata/integer-triangles
 [/Integer triangles]: Integer%20triangles
+[PI approximation]: https://www.codewars.com/kata/pi-approximation
+[/PI approximation]: pi%20approximation
