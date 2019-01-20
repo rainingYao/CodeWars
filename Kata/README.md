@@ -3,6 +3,7 @@
 |<5 kyu> [Primes in numbers]|[/Primes in numbers]|
 |<6 kyu> [Duplicate Encoder]|[/Duplicate Encoder]|
 |<6 kyu> [Integer depth]|[/Integer depth]|
+|<5 kyu> [Integer triangles]|[/Integer triangles]|
 
 
 [Primes in numbers]: https://www.codewars.com/kata/54d512e62a5e54c96200019e
@@ -11,3 +12,5 @@
 [/Duplicate Encoder]: Duplicate%20Encoder
 [Integer depth]: https://www.codewars.com/kata/59b401e24f98a813f9000026
 [/Integer depth]: Integer%20depth
+[Integer triangles]: https://www.codewars.com/kata/integer-triangles
+[/Integer triangles]: Integer%20triangles
