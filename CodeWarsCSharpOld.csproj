@@ -67,6 +67,7 @@
     <None Include="app.config" />
     <None Include="Kata\ConsecutiveStrings\ConsecutiveStrings.md" />
     <None Include="Kata\Duplicate Encoder\README.md" />
+    <None Include="Kata\Get the Middle Character\README.md" />
     <None Include="Kata\Integer depth\README.md" />
     <None Include="Kata\PI approximation\README.md" />
     <None Include="Kata\README.md" />
