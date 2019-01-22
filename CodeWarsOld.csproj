@@ -55,8 +55,10 @@
   <ItemGroup>
     <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
     <Compile Include="Kata\DeleteNth\DeleteNth.cs" />
+    <Compile Include="Kata\Duplicate Encoder\DuplicateEncode.cs" />
+    <Compile Include="Kata\Integer depth\IntegerDepth.cs" />
     <Compile Include="Kata\LongestConsConsecutive_stringsecutives\LongestConsConsecutive_stringsecutives.cs" />
-    <Compile Include="Kata\LearnIEu.cs" />
+    <Compile Include="Kata\PI approximation\PiApprox.cs" />
     <Compile Include="Kata\RPS\RPS.cs" />
     <Compile Include="Kata\StepInPrimes\StepInPrimes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +66,10 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Kata\ConsecutiveStrings\ConsecutiveStrings.md" />
+    <None Include="Kata\Duplicate Encoder\README.md" />
+    <None Include="Kata\Integer depth\README.md" />
+    <None Include="Kata\PI approximation\README.md" />
+    <None Include="Kata\README.md" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
@@ -72,7 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Kata\DeleteNth\DeleteNth.html" />
-    <Content Include="Kata\Details.html" />
     <Content Include="Kata\LongestConsConsecutive_stringsecutives\LongestConsConsecutive_stringsecutives.html" />
     <Content Include="Kata\RPS\RPS.html" />
     <Content Include="Kata\StepInPrimes\StepInPrimes.html" />
