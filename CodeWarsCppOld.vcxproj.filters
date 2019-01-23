@@ -19,6 +19,9 @@
     <Filter Include="Kata\IsIsogram">
       <UniqueIdentifier>{e2209af2-a796-48cc-9dc1-606317e855e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Kata\Vasya - Clerk">
+      <UniqueIdentifier>{191524fa-aa05-4f63-9f3b-1fd888e27226}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -37,6 +40,9 @@
     </ClCompile>
     <ClCompile Include="Kata\IsIsogram\IsIsogram.cpp">
       <Filter>Kata\IsIsogram</Filter>
+    </ClCompile>
+    <ClCompile Include="Kata\Vasya - Clerk\Vasya - Clerk.cpp">
+      <Filter>Kata\Vasya - Clerk</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

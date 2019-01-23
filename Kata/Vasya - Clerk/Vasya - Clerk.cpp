@@ -7,25 +7,62 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace CodeWarsCpp
 {
-	TEST_CLASS(tickets_test)
+	TEST_CLASS(VasyaClerk)
 	{
 	public:
+		string yes = "YES";
+		string no = "NO";
+		vector<int> v1 = { 25, 25, 50, 50 };
+		vector<int> v2 = { 25, 100 };
 
-		TEST_METHOD(Sample_Test)
+		TEST_METHOD(CurtCode)
 		{
-			string yes = "YES";
-			string no = "NO";
-			vector<int> v1 = { 25,25,50,50 };
-			vector<int> v2 = { 25,100 };
-			Assert().AreEqual(yes, tickets(v1));
-			Assert().AreEqual(no, tickets(v2));
+			Assert::AreEqual(CurtCode(v1), yes);
+			Assert::AreEqual(CurtCode(v2), no);
 		}
 
-		std::string tickets(const vector<int> peopleInLine)
+		std::string CurtCode(const vector<int> peopleInLine)
+		{
+			int a = 0, b = 0, i = -1;
+			while (++i<peopleInLine.size())
+			{
+				if (peopleInLine[i] == 25){ a++; }
+				else if (peopleInLine[i] == 50 && a > 0){ a--; b++; }
+				else if (peopleInLine[i] == 100 && a > 0 && b > 0){ a--; b--; }
+				else if (peopleInLine[i] == 100 && a > 2){ a -= 3; }
+				else return "NO";
+			}
+			return "YES";
+		}
+
+		//A Clever Code
+		std::string tickets(const std::vector<int> peopleInLine){
+			int a = 0, b = 0;
+			for (auto v : peopleInLine) {
+				if (v == 25) a++;
+				if (v == 50) { b++; a--; }
+				if (v == 100) { a--; b > 0 ? b-- : a -= 2; }
+				if (a < 0 || b < 0) return "NO";
+			}
+			return "YES";
+		}
+
+		TEST_METHOD(IfElseCode)
+		{
+			Assert::AreEqual(IfElseCode(v1), yes);
+			Assert::AreEqual(IfElseCode(v2), no);
+		}
+
+		TEST_METHOD(SwitchCaseCode)
+		{
+			Assert::AreEqual(SwitchCaseCode(v1), yes);
+			Assert::AreEqual(SwitchCaseCode(v2), no);
+		}
+
+		std::string IfElseCode(const vector<int> peopleInLine)
 		{
 			int i25 = 0;
 			int i50 = 0;
-			int i100 = 0;
 			for (int i = 0; i < peopleInLine.size(); i++)
 			{
 				if (25 == peopleInLine[i]) i25 += 25;
@@ -37,7 +74,7 @@ namespace CodeWarsCpp
 				}
 				else
 				{
-					if (i25 <= 25 || i25 + i50 < 75) return"NO";
+					if (i25 < 25 || i25 + i50 < 75) return"NO";
 					i25 -= 25;
 					if (i50 >= 50)i50 -= 50;
 					else if (i25 >= 50)i25 -= 50;
@@ -46,5 +83,41 @@ namespace CodeWarsCpp
 			}
 			return "YES";
 		}
+
+		std::string SwitchCaseCode(const vector<int> peopleInLine)
+		{
+			int i25 = 0;
+			int i50 = 0;
+			for (int i = 0; i < peopleInLine.size(); i++)
+			{
+				switch (peopleInLine[i])
+				{
+				case 25:i25 += 25; break;
+				case 50:
+					if (i25 == 0)return"NO";
+					i25 -= 25;
+					i50 += 50;
+					break;
+				default:
+					if (i25 >= 25 && i50 >= 50)
+					{
+						i25 -= 25;
+						i50 -= 50;
+					}
+					else if (i25 >= 75)
+					{
+						i25 -= 75;
+					}
+					else
+					{
+						return "NO";
+					}
+					break;
+				}
+			}
+			return "YES";
+		}
+
 	};
+
 }
