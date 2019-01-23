@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
+    <Compile Include="Kata\Count the smiley faces!\CountSmileys.cs" />
     <Compile Include="Kata\DeleteNth\DeleteNth.cs" />
     <Compile Include="Kata\Duplicate Encoder\DuplicateEncode.cs" />
     <Compile Include="Kata\Integer depth\IntegerDepth.cs" />
@@ -66,6 +67,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Kata\ConsecutiveStrings\ConsecutiveStrings.md" />
+    <None Include="Kata\Count the smiley faces!\README.md" />
     <None Include="Kata\Duplicate Encoder\README.md" />
     <None Include="Kata\Get the Middle Character\README.md" />
     <None Include="Kata\Integer depth\README.md" />
