@@ -10,15 +10,21 @@ namespace CodeWarsCpp
 	TEST_CLASS(VasyaClerk)
 	{
 	public:
+
 		string yes = "YES";
 		string no = "NO";
-		vector<int> v1 = { 25, 25, 50, 50 };
-		vector<int> v2 = { 25, 100 };
+		vector<int> v[2];
+
+		VasyaClerk()
+		{
+			v[0] = { 25, 25, 50, 50 };
+			v[1] = { 25, 100 };
+		}
 
 		TEST_METHOD(CurtCode)
 		{
-			Assert::AreEqual(CurtCode(v1), yes);
-			Assert::AreEqual(CurtCode(v2), no);
+			Assert::AreEqual(CurtCode(v[0]), yes);
+			Assert::AreEqual(CurtCode(v[1]), no);
 		}
 
 		std::string CurtCode(const vector<int> peopleInLine)
@@ -49,14 +55,14 @@ namespace CodeWarsCpp
 
 		TEST_METHOD(IfElseCode)
 		{
-			Assert::AreEqual(IfElseCode(v1), yes);
-			Assert::AreEqual(IfElseCode(v2), no);
+			Assert::AreEqual(CurtCode(v[0]), yes);
+			Assert::AreEqual(CurtCode(v[1]), no);
 		}
 
 		TEST_METHOD(SwitchCaseCode)
 		{
-			Assert::AreEqual(SwitchCaseCode(v1), yes);
-			Assert::AreEqual(SwitchCaseCode(v2), no);
+			Assert::AreEqual(CurtCode(v[0]), yes);
+			Assert::AreEqual(CurtCode(v[1]), no);
 		}
 
 		std::string IfElseCode(const vector<int> peopleInLine)
