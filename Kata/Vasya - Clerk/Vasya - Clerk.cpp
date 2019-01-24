@@ -55,14 +55,14 @@ namespace CodeWarsCpp
 
 		TEST_METHOD(IfElseCode)
 		{
-			Assert::AreEqual(CurtCode(v[0]), yes);
-			Assert::AreEqual(CurtCode(v[1]), no);
+			Assert::AreEqual(IfElseCode(v[0]), yes);
+			Assert::AreEqual(IfElseCode(v[1]), no);
 		}
 
 		TEST_METHOD(SwitchCaseCode)
 		{
-			Assert::AreEqual(CurtCode(v[0]), yes);
-			Assert::AreEqual(CurtCode(v[1]), no);
+			Assert::AreEqual(SwitchCaseCode(v[0]), yes);
+			Assert::AreEqual(SwitchCaseCode(v[1]), no);
 		}
 
 		std::string IfElseCode(const vector<int> peopleInLine)
