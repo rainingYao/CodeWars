@@ -66,7 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Kata\ConsecutiveStrings\ConsecutiveStrings.md" />
+    <None Include="Kata\ConsecutiveStrings\README.md" />
     <None Include="Kata\Count the smiley faces!\README.md" />
     <None Include="Kata\Duplicate Encoder\README.md" />
     <None Include="Kata\Get the Middle Character\README.md" />
