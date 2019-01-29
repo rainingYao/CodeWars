@@ -27,9 +27,9 @@ Have fun coding it and please don't forget to vote and rank this kata! :-)
 																																    
 This kata is part of a series of katas for constructing a car:																	    
 
-[Constructing a car #1 - Engine and Fuel Tank](https://www.codewars.com/kata/578b4f9b7c77f535fc00002f)
-[Constructing a car #2 - Driving](https://www.codewars.com/kata/578df8f3deaed98fcf0001e9)
-[Constructing a car #3 - On-Board Computer](https://www.codewars.com/kata/57961d4e4be9121ec90001bd)
+[Constructing a car #1 - Engine and Fuel Tank](https://www.codewars.com/kata/578b4f9b7c77f535fc00002f)  
+[Constructing a car #2 - Driving](https://www.codewars.com/kata/578df8f3deaed98fcf0001e9)  
+[Constructing a car #3 - On-Board Computer](https://www.codewars.com/kata/57961d4e4be9121ec90001bd)  
 
 The next parts will be coming soon... 
 

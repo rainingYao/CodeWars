@@ -52,10 +52,14 @@
     <Compile Include="Kata\BreakCamelCase\BreakCamelCase.cs" />
     <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
     <Compile Include="Kata\Constructing a car\Car.cs" />
+    <Compile Include="Kata\Count the smiley faces!\CountSmileys.cs" />
     <Compile Include="Kata\DeleteNth\DeleteNth.cs" />
+    <None Include="Kata\Constructing a car\README.md" />
+    <None Include="Kata\Count the smiley faces!\README.md" />
     <None Include="Kata\Duplicate Encoder\README.md" />
     <Compile Include="Kata\Duplicate Encoder\DuplicateEncode.cs" />
     <Compile Include="Kata\DuplicateCount\DuplicateCount.cs" />
+    <None Include="Kata\Get the Middle Character\README.md" />
     <None Include="Kata\Integer depth\README.md" />
     <Compile Include="Kata\Integer depth\IntegerDepth.cs" />
     <Compile Include="Kata\Integer triangles\IntTriangles.cs" />
@@ -67,6 +71,7 @@
     <Compile Include="Kata\Primes in numbers\PrimeDecomp.cs" />
     <Compile Include="Kata\RPS\RPS.cs" />
     <Compile Include="Kata\StepInPrimes\StepInPrimes.cs" />
+    <Compile Include="Kata\Sum by Factors\SumOfDivided.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +81,9 @@
     <None Include="Kata\PI approximation\README.md" />
     <None Include="Kata\Primes in numbers\README.md" />
     <None Include="Kata\README.md" />
+    <None Include="Kata\Sum by Factors\README.md" />
+    <None Include="Kata\Sum by Factors\最大公约数GCD的三种求法.md" />
+    <None Include="Kata\Vasya - Clerk\README.md" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
@@ -88,6 +96,7 @@
     <Content Include="Kata\LongestConsConsecutive_stringsecutives\LongestConsConsecutive_stringsecutives.html" />
     <Content Include="Kata\RPS\RPS.html" />
     <Content Include="Kata\StepInPrimes\StepInPrimes.html" />
+    <Content Include="Kata\Vasya - Clerk\Vasya - Clerk.cpp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
