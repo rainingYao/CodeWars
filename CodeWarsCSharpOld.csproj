@@ -62,6 +62,7 @@
     <Compile Include="Kata\PI approximation\PiApprox.cs" />
     <Compile Include="Kata\RPS\RPS.cs" />
     <Compile Include="Kata\StepInPrimes\StepInPrimes.cs" />
+    <Compile Include="Kata\Sum by Factors\SumOfDivided.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +74,9 @@
     <None Include="Kata\Integer depth\README.md" />
     <None Include="Kata\PI approximation\README.md" />
     <None Include="Kata\README.md" />
+    <None Include="Kata\Sum by Factors\最大公约数GCD的三种求法.md" />
+    <None Include="Kata\Sum by Factors\README.md" />
+    <None Include="Kata\Vasya - Clerk\README.md" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>

@@ -4,7 +4,11 @@
 |<6 kyu> [Duplicate Encoder]|[/Duplicate Encoder]|
 |<6 kyu> [Integer depth]|[/Integer depth]|
 |<5 kyu> [Integer triangles]|[/Integer triangles]|
-|<6 kyu> [PI approximation ]|[/PI approximation]|
+|<6 kyu> [PI approximation]|[/PI approximation]|
+|<7 kyu> [Get the Middle Character]|[/Get the Middle Character]|
+|<6 kyu> [Vasya - Clerk]|[/Vasya - Clerk]|
+|<4 kyu> [Sum by Factors]|[/Sum by Factors]|
+|<5 kyu> [Constructing a car]|[/Constructing a car]|
 
 
 [Primes in numbers]: https://www.codewars.com/kata/54d512e62a5e54c96200019e
@@ -17,3 +21,12 @@
 [/Integer triangles]: Integer%20triangles
 [PI approximation]: https://www.codewars.com/kata/pi-approximation
 [/PI approximation]: pi%20approximation
+[Get the Middle Character]: https://www.codewars.com/kata/56747fd5cb988479af000028
+[/Get the Middle Character]: Get%20the%20Middle%20Character
+[Vasya - Clerk]: https://www.codewars.com/kata/555615a77ebc7c2c8a0000b8
+[/Vasya - Clerk]: Vasya%20-%20Clerk
+[Sum by Factors]: https://www.codewars.com/kata/sum-by-factors
+[/Sum by Factors]: Sum%20by%20Factors
+[Constructing a car]: https://www.codewars.com/kata/578b4f9b7c77f535fc00002f
+[/Constructing a car]: Constructing%20a%20car
+
