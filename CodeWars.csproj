@@ -49,7 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Kata\Anagrams\Anagrams.cs" />
-    <Compile Include="Kata\Battle ships\BattleShips.cs" />
+    <Compile Include="Kata\Battle ships\SimpleSemanticCode.cs" />
+    <Compile Include="Kata\Battle ships\MyCode.cs" />
     <Compile Include="Kata\BreakCamelCase\BreakCamelCase.cs" />
     <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
     <Compile Include="Kata\Constructing a car\Car.cs" />
