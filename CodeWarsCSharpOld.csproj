@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Kata\Caesar Cipher\SecondVariationOnCaesarCipher.cs" />
     <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
     <Compile Include="Kata\Count the smiley faces!\CountSmileys.cs" />
     <Compile Include="Kata\DeleteNth\DeleteNth.cs" />
