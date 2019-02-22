@@ -10,6 +10,7 @@
 |<4 kyu> [Sum by Factors]|[/Sum by Factors]|
 |<5 kyu> [Constructing a car]|[/Constructing a car]|
 |<5 kyu> [Battle ships: Sunk damaged or not touched?]|[/Battle ships]|
+|<5 kyu> [Second Variation on Caesar Cipher]|[/Second Variation on Caesar Cipher]|
 
 
 [Primes in numbers]: https://www.codewars.com/kata/54d512e62a5e54c96200019e
@@ -32,3 +33,5 @@
 [/Constructing a car]: Constructing%20a%20car
 [Battle ships: Sunk damaged or not touched?]: https://www.codewars.com/kata/578b4f9b7c77f535fc00002f
 [/Battle ships]: Battle%20ships
+[Second Variation on Caesar Cipher](https://www.codewars.com/kata/second-variation-on-caesar-cipher)
+[/Second Variation on Caesar Cipher]: Caesar%20Cipher

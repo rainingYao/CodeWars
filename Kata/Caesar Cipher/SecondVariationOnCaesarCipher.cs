@@ -1,4 +1,4 @@
-﻿namespace CodeWars.Kata.Caesar_Cipher//https://www.codewars.com/kata/second-variation-on-caesar-cipher/train/csharp
+﻿namespace CodeWars.Kata.Caesar_Cipher
 {
     using System;
     using NUnit.Framework;
@@ -9,9 +9,26 @@
     public class CaesarCipherTests
     {
         [Test]
+        public void LimitTest1()
+        {
+            string u = "abcdefghijklmn";
+            List<string> v = new List<string> { "abbc", "defg", "hijk", "lmno" };
+            Assert.AreEqual(u, CaesarTwo.decode(v));
+            Assert.AreEqual(u, CaesarTwo.decode(CaesarTwo.encodeStr(u, 1)));
+        }
+
+        [Test]
         public void Test1()
         {
             string u = "I should have known that you would have a perfect answer for me!!!";
+            Assert.AreEqual(u, CaesarTwo.decode(CaesarTwo.encodeStr(u, 1)));
+        }
+        [Test]
+        public void Test1a()
+        {
+            string u = "abcdefghjuty12";
+            List<string> v = new List<string> { "abbc", "defg", "hikv", "uz12" };
+            Assert.AreEqual(v, CaesarTwo.encodeStr(u, 1));
             Assert.AreEqual(u, CaesarTwo.decode(CaesarTwo.encodeStr(u, 1)));
         }
         [Test]
@@ -19,18 +36,55 @@
         {
             string u = "O CAPTAIN! my Captain! our fearful trip is done;";
             List<string> v = new List<string> { "opP DBQUBJ", "O! nz Dbqu", "bjo! pvs g", "fbsgvm usj", "q jt epof;" };
+            Assert.AreEqual(v, CaesarTwo.encodeStr(u, 1));
             Assert.AreEqual(u, CaesarTwo.decode(v));
         }
-
         [Test]
-        public void LimitTest1()
+        public void Test3()
         {
-            string u = "ab";
-            List<string> v = new List<string> { "abbc", "defg", "hikv", "uz12"};
+            string u = "For you bouquets and ribbon'd wreaths--for you the shores a-crowding;";
+            List<string> v = new List<string> { "fgGps zpv cpvrv", "fut boe sjccpo'", "e xsfbuit--gps ", "zpv uif tipsft ", "b-dspxejoh;" };
+            Assert.AreEqual(v, CaesarTwo.encodeStr(u, 1));
             Assert.AreEqual(u, CaesarTwo.decode(v));
-            Assert.AreEqual(u, CaesarTwo.decode(CaesarTwo.encodeStr(u, 1)));
         }
-
+        [Test]
+        public void Test4()
+        {
+            string u = "Exult, O shores, and ring, O bells! But I, with mournful tread, Walk the deck my Captain lies, Fallen cold and dead. ";
+            List<string> v = new List<string> { "efFyvmu, P tipsft, boe s", "joh, P cfmmt! Cvu J, xju", "i npvsogvm usfbe, Xbml u", "if efdl nz Dbqubjo mjft,", " Gbmmfo dpme boe efbe. " };
+            Assert.AreEqual(v, CaesarTwo.encodeStr(u, 1));
+            Assert.AreEqual(u, CaesarTwo.decode(v));
+        }
+        [Test]
+        public void Test5()
+        {
+            string u = "Had I the heavens' embroidered cloths, Enwrought with golden and silver light,";
+            List<string> v = new List<string> { "hiIbe J uif ifbw", "fot' fncspjefsfe", " dmpuit, Foxspvh", "iu xjui hpmefo b", "oe tjmwfs mjhiu," };
+            Assert.AreEqual(v, CaesarTwo.encodeStr(u, 1));
+            Assert.AreEqual(u, CaesarTwo.decode(v));
+        }
+        [Test]
+        public void Test6()
+        {
+            string u = "The blue and the dim and the dark cloths Of night and light and the half-light,";
+            List<string> v = new List<string> { "tuUif cmvf boe ui", "f ejn boe uif ebs", "l dmpuit Pg ojhiu", " boe mjhiu boe ui", "f ibmg-mjhiu," };
+            Assert.AreEqual(v, CaesarTwo.encodeStr(u, 1));
+            Assert.AreEqual(u, CaesarTwo.decode(v));
+        }
+        [Test]
+        public void Test7()
+        {
+            string u = "I would spread the cloths under your feet: But I, being poor, have only my dreams;";
+            List<string> v = new List<string> { "ijJ xpvme tqsfbe ", "uif dmpuit voefs ", "zpvs gffu: Cvu J,", " cfjoh qpps, ibwf", " pomz nz esfbnt;" };
+            Assert.AreEqual(v, CaesarTwo.encodeStr(u, 1));
+            Assert.AreEqual(u, CaesarTwo.decode(v));
+        }
+        [Test]
+        public void Test8()
+        {
+            string u = "I have spread my dreams under your feet; Tread softly because you tread on my dreams. William B Yeats (1865-1939)";
+            Assert.AreEqual(u, CaesarTwo.decode(CaesarTwo.encodeStr(u, 25)));
+        }
     }
 
     public class CaesarTwo
@@ -62,7 +116,7 @@
             list.Add(s.Substring(p, p));
             list.Add(s.Substring(p * 2, p));
             list.Add(s.Substring(p * 3, p));
-            if (p > 1) list.Add(s.Substring(p * 4, s.Length - p * 4));
+            if (p > 4) list.Add(s.Substring(p * 4, s.Length - p * 4));
             return list;
         }
 
