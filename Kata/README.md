@@ -10,6 +10,7 @@
 |<4 kyu> [Sum by Factors]|[/Sum by Factors]|
 |<5 kyu> [Constructing a car]|[/Constructing a car]|
 |<5 kyu> [Battle ships: Sunk damaged or not touched?]|[/Battle ships]|
+|<5 kyu> [Event & Delegate]|[/EventAndDelegate]|
 
 
 [Primes in numbers]: https://www.codewars.com/kata/54d512e62a5e54c96200019e
@@ -32,3 +33,5 @@
 [/Constructing a car]: Constructing%20a%20car
 [Battle ships: Sunk damaged or not touched?]: https://www.codewars.com/kata/578b4f9b7c77f535fc00002f
 [/Battle ships]: Battle%20ships
+[Event & Delegate]: https://www.codewars.com/kata/5790bd38671cb57f7900012f
+[/EventAndDelegate]: EventAndDelegate

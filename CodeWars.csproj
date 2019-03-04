@@ -62,8 +62,11 @@
     <None Include="Kata\Duplicate Encoder\README.md" />
     <Compile Include="Kata\Duplicate Encoder\DuplicateEncode.cs" />
     <Compile Include="Kata\DuplicateCount\DuplicateCount.cs" />
+    <None Include="Kata\EventAndDelegate\README.md" />
     <None Include="Kata\Get the Middle Character\README.md" />
     <None Include="Kata\Integer depth\README.md" />
+    <Compile Include="Kata\EventAndDelegate\MyCode.cs" />
+    <Compile Include="Kata\EventAndDelegate\Test.cs" />
     <Compile Include="Kata\Integer depth\IntegerDepth.cs" />
     <Compile Include="Kata\Integer triangles\IntTriangles.cs" />
     <Compile Include="Kata\IsIsogram\IsIsogram.cs" />

@@ -3,8 +3,6 @@
     using NUnit.Framework;
     using System;
     using System.Linq;
-    using System;
-    using NUnit.Framework;
 
     [TestFixture]
     public static class LongestConsecutivesTests
