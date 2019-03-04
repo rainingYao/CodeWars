@@ -51,6 +51,7 @@
     <Compile Include="Kata\Anagrams\Anagrams.cs" />
     <Compile Include="Kata\Battle ships\SimpleSemanticCode.cs" />
     <Compile Include="Kata\Battle ships\MyCode.cs" />
+    <Compile Include="Kata\Bit Counting\SomeCodes.cs" />
     <Compile Include="Kata\Bit Counting\MyCode.cs" />
     <Compile Include="Kata\BreakCamelCase\BreakCamelCase.cs" />
     <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
