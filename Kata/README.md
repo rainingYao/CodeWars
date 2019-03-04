@@ -11,6 +11,7 @@
 |<5 kyu> [Constructing a car]|[/Constructing a car]|
 |<5 kyu> [Battle ships: Sunk damaged or not touched?]|[/Battle ships]|
 |<5 kyu> [Event & Delegate]|[/EventAndDelegate]|
+|<5 kyu> [Second Variation on Caesar Cipher]|[/Second Variation on Caesar Cipher]|
 
 
 [Primes in numbers]: https://www.codewars.com/kata/54d512e62a5e54c96200019e
@@ -35,3 +36,5 @@
 [/Battle ships]: Battle%20ships
 [Event & Delegate]: https://www.codewars.com/kata/5790bd38671cb57f7900012f
 [/EventAndDelegate]: EventAndDelegate
+[Second Variation on Caesar Cipher](https://www.codewars.com/kata/second-variation-on-caesar-cipher)
+[/Second Variation on Caesar Cipher]: Caesar%20Cipher
