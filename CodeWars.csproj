@@ -51,12 +51,14 @@
     <Compile Include="Kata\Anagrams\Anagrams.cs" />
     <Compile Include="Kata\Battle ships\SimpleSemanticCode.cs" />
     <Compile Include="Kata\Battle ships\MyCode.cs" />
+    <Compile Include="Kata\Bit Counting\MyCode.cs" />
     <Compile Include="Kata\BreakCamelCase\BreakCamelCase.cs" />
     <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
     <Compile Include="Kata\Constructing a car\Car.cs" />
     <Compile Include="Kata\Count the smiley faces!\CountSmileys.cs" />
     <Compile Include="Kata\DeleteNth\DeleteNth.cs" />
     <None Include="Kata\Battle ships\README.md" />
+    <None Include="Kata\Bit Counting\README.md" />
     <None Include="Kata\Constructing a car\README.md" />
     <None Include="Kata\Count the smiley faces!\README.md" />
     <None Include="Kata\Duplicate Encoder\README.md" />
