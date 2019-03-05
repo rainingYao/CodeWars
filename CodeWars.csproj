@@ -70,6 +70,7 @@
     <None Include="Kata\Integer depth\README.md" />
     <Compile Include="Kata\EventAndDelegate\MyCode.cs" />
     <Compile Include="Kata\EventAndDelegate\Test.cs" />
+    <Compile Include="Kata\Find the unique number\MyCode.cs" />
     <Compile Include="Kata\Integer depth\IntegerDepth.cs" />
     <Compile Include="Kata\Integer triangles\IntTriangles.cs" />
     <Compile Include="Kata\IsIsogram\IsIsogram.cs" />
