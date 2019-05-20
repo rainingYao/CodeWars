@@ -51,6 +51,7 @@
     <Compile Include="Kata\Anagrams\Anagrams.cs" />
     <Compile Include="Kata\Battle ships\SimpleSemanticCode.cs" />
     <Compile Include="Kata\Battle ships\MyCode.cs" />
+    <Compile Include="Kata\BinaryGeneticAlgorithms\BinaryGeneticAlgorithms.cs" />
     <Compile Include="Kata\Bit Counting\SomeCodes.cs" />
     <Compile Include="Kata\Bit Counting\MyCode.cs" />
     <Compile Include="Kata\BreakCamelCase\BreakCamelCase.cs" />
@@ -66,11 +67,13 @@
     <Compile Include="Kata\Duplicate Encoder\DuplicateEncode.cs" />
     <Compile Include="Kata\DuplicateCount\DuplicateCount.cs" />
     <None Include="Kata\EventAndDelegate\README.md" />
+    <None Include="Kata\GeneticAlgorithmSeries\README.md" />
     <None Include="Kata\Get the Middle Character\README.md" />
     <None Include="Kata\Integer depth\README.md" />
     <Compile Include="Kata\EventAndDelegate\MyCode.cs" />
     <Compile Include="Kata\EventAndDelegate\Test.cs" />
     <Compile Include="Kata\Find the unique number\MyCode.cs" />
+    <Compile Include="Kata\GeneticAlgorithmSeries\GeneticAlgorithmSeries.cs" />
     <Compile Include="Kata\Integer depth\IntegerDepth.cs" />
     <Compile Include="Kata\Integer triangles\IntTriangles.cs" />
     <Compile Include="Kata\IsIsogram\IsIsogram.cs" />
@@ -108,6 +111,7 @@
     <Content Include="Kata\StepInPrimes\StepInPrimes.html" />
     <Content Include="Kata\Vasya - Clerk\Vasya - Clerk.cpp" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -14,6 +14,8 @@
 |<5 kyu> [Second Variation on Caesar Cipher]|[/Second Variation on Caesar Cipher]|
 |<6 kyu> [Bit Counting]|[/Bit Counting]|
 |<6 kyu> [Find the unique number]|[/Find the unique number]|
+|<7~6 kyu> **5 in 1** Genetic Algorithm Series|[/GeneticAlgorithmSeries]|
+|<5 kyu> [Binary Genetic Algorithms]|[/BinaryGeneticAlgorithms]|
 
 
 [Primes in numbers]: https://www.codewars.com/kata/54d512e62a5e54c96200019e
@@ -44,3 +46,6 @@
 [/Bit Counting]: Bit%20Counting
 [Find the unique number]: https://www.codewars.com/kata/585d7d5adb20cf33cb000235
 [/Find the unique number]: Find%20the%20unique%20number
+[/GeneticAlgorithmSeries]: GeneticAlgorithmSeries
+[Binary Genetic Algorithms]: https://www.codewars.com/kata/binary-genetic-algorithms
+[/BinaryGeneticAlgorithms]: BinaryGeneticAlgorithms
