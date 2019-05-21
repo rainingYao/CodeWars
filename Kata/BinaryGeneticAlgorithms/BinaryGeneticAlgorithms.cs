@@ -41,12 +41,35 @@
 
         public IEnumerable<string> Crossover(string chromosome1, string chromosome2)
         {
-            return new string[] { };
+            int cut = random.Next(chromosome1.Length / 3, chromosome1.Length * 2 / 3);
+            return new string[] { chromosome1.Substring(0, cut) + chromosome2.Substring(cut),
+            chromosome2.Substring(0, cut) + chromosome1.Substring(cut)};
         }
 
         public string Run(Func<string, double> fitness, int length, double p_c, double p_m, int iterations = 100)
         {
-            return "";
+            List<string> population = new List<string>();
+            List<double> fitnesses = new List<double>();
+            for (int i = 0; i < 10; i++)
+            {
+                string chromosome = Generate(length);
+                population.Add(chromosome);
+                fitnesses.Add(fitness(chromosome));
+            }
+            for (int i = 0; i < iterations; i++)
+            {
+                string q = Select(population, fitnesses, fitnesses.Sum());
+                string p = Select(population, fitnesses, fitnesses.Sum());
+                if (random.NextDouble() > p_c)
+                {
+                    int cut = random.Next(q.Length, p.Length);
+                    (q, p) = (q.Substring(0, cut) + p.Substring(cut), p.Substring(0, cut) + q.Substring(cut));
+                }
+                q = Mutate(q, p_m); p = Mutate(p, p_m);
+                population.Add(q); population.Add(p);
+                fitnesses.Add(fitness(q)); fitnesses.Add(fitness(p));
+            }
+            return population[fitnesses.IndexOf(fitnesses.Max())];
         }
     }
 }
