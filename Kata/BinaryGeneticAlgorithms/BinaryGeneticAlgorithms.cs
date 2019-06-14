@@ -95,7 +95,8 @@ namespace BinaryGeneticAlgorithms.rainingYao
                     if (random.NextDouble() <= p_c)
                     {
                         int cut = random.Next(0, length);
-                        (p, q) = (p.Substring(0, cut) + q.Substring(cut), q.Substring(0, cut) + p.Substring(cut));
+                        p = p.Substring(0, cut) + q.Substring(cut);
+                        q = q.Substring(0, cut) + p.Substring(cut);
                     }
                     q = Mutate(q, p_m); p = Mutate(p, p_m);
                     sons[j] = q;
