@@ -78,6 +78,7 @@
     <Compile Include="Kata\GeneticAlgorithmSeries\GeneticAlgorithmSeries.cs" />
     <Compile Include="Kata\Integer depth\IntegerDepth.cs" />
     <Compile Include="Kata\Integer triangles\IntTriangles.cs" />
+    <Compile Include="Kata\IntegersRecreationOne\rainingYao.cs" />
     <Compile Include="Kata\IsIsogram\IsIsogram.cs" />
     <Compile Include="Kata\LongestConsConsecutive_stringsecutives\LongestConsConsecutive_stringsecutives.cs" />
     <Compile Include="Kata\MazeRunner\Maze.cs" />
