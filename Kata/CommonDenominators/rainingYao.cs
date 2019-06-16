@@ -15,35 +15,65 @@
         {
 
             long[,] lst = new long[,] { { 1, 2 }, { 1, 3 }, { 1, 4 } };
-            Assert.AreEqual("(6,12)(4,12)(3,12)", Fracts.convertFrac(lst));
+            Assert.AreEqual("(6,12)(4,12)(3,12)", Fracts.convertFrac1(lst));
 
             lst = new long[,] { { 69, 130 }, { 87, 1310 }, { 3, 4 } };
-            Assert.AreEqual("(18078,34060)(2262,34060)(25545,34060)", Fracts.convertFrac(lst));
+            Assert.AreEqual("(18078,34060)(2262,34060)(25545,34060)", Fracts.convertFrac1(lst));
 
             lst = new long[,] { };
-            Assert.AreEqual("", Fracts.convertFrac(lst));
+            Assert.AreEqual("", Fracts.convertFrac1(lst));
 
             lst = new long[,] { { 77, 130 }, { 84, 131 }, { 3, 4 } };
-            Assert.AreEqual("(20174,34060)(21840,34060)(25545,34060)", Fracts.convertFrac(lst));
+            Assert.AreEqual("(20174,34060)(21840,34060)(25545,34060)", Fracts.convertFrac1(lst));
 
             lst = new long[,] { { 6, 13 }, { 187, 1310 }, { 31, 41 } };
-            Assert.AreEqual("(322260,698230)(99671,698230)(527930,698230)", Fracts.convertFrac(lst));
+            Assert.AreEqual("(322260,698230)(99671,698230)(527930,698230)", Fracts.convertFrac1(lst));
 
             lst = new long[,] { { 8, 15 }, { 7, 111 }, { 4, 25 } };
-            Assert.AreEqual("(1480,2775)(175,2775)(444,2775)", Fracts.convertFrac(lst));
+            Assert.AreEqual("(1480,2775)(175,2775)(444,2775)", Fracts.convertFrac1(lst));
 
             lst = new long[,] { { 1, 100 }, { 3, 1000 }, { 1, 2500 }, { 1, 20000 } };
-            Assert.AreEqual("(200,20000)(60,20000)(8,20000)(1,20000)", Fracts.convertFrac(lst));
+            Assert.AreEqual("(200,20000)(60,20000)(8,20000)(1,20000)", Fracts.convertFrac1(lst));
 
             lst = new long[,] { { 1, 1 }, { 3, 1 }, { 4, 1 }, { 5, 1 } };
-            Assert.AreEqual("(1,1)(3,1)(4,1)(5,1)", Fracts.convertFrac(lst));
+            Assert.AreEqual("(1,1)(3,1)(4,1)(5,1)", Fracts.convertFrac1(lst));
+
+        }
+
+        [Test]
+        public void Test2()
+        {
+
+            long[,] lst = new long[,] { { 1, 2 }, { 1, 3 }, { 1, 4 } };
+            Assert.AreEqual("(6,12)(4,12)(3,12)", Fracts.convertFrac2(lst));
+
+            lst = new long[,] { { 69, 130 }, { 87, 1310 }, { 3, 4 } };
+            Assert.AreEqual("(18078,34060)(2262,34060)(25545,34060)", Fracts.convertFrac2(lst));
+
+            lst = new long[,] { };
+            Assert.AreEqual("", Fracts.convertFrac2(lst));
+
+            lst = new long[,] { { 77, 130 }, { 84, 131 }, { 3, 4 } };
+            Assert.AreEqual("(20174,34060)(21840,34060)(25545,34060)", Fracts.convertFrac2(lst));
+
+            lst = new long[,] { { 6, 13 }, { 187, 1310 }, { 31, 41 } };
+            Assert.AreEqual("(322260,698230)(99671,698230)(527930,698230)", Fracts.convertFrac2(lst));
+
+            lst = new long[,] { { 8, 15 }, { 7, 111 }, { 4, 25 } };
+            Assert.AreEqual("(1480,2775)(175,2775)(444,2775)", Fracts.convertFrac2(lst));
+
+            lst = new long[,] { { 1, 100 }, { 3, 1000 }, { 1, 2500 }, { 1, 20000 } };
+            Assert.AreEqual("(200,20000)(60,20000)(8,20000)(1,20000)", Fracts.convertFrac2(lst));
+
+            lst = new long[,] { { 1, 1 }, { 3, 1 }, { 4, 1 }, { 5, 1 } };
+            Assert.AreEqual("(1,1)(3,1)(4,1)(5,1)", Fracts.convertFrac2(lst));
 
         }
     }
 
     public class Fracts
     {
-        public static string convertFrac(long[,] lst)
+        public static string convertFrac1(long[,] lst)
         {
             ////最大公约数,乘积,最小公倍数
             //long gcd, product, lcm;
@@ -93,6 +123,22 @@
             for (int i = 0; i < lst.GetLength(0); i++)
             {
                 sb.Append("(").Append(lst[i, 0]).Append(",").Append(lst[i, 1]).Append(")");
+            }
+            return sb.ToString();
+        }
+
+        public static string convertFrac2(long[,] lst)
+        {
+            long lcm = 1;
+            for (int i = 0; i < lst.GetLength(0); i++)
+            {
+                lcm = LCM(lcm, lst[i, 1]);
+            }
+            //拼接答案
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < lst.GetLength(0); i++)
+            {
+                sb.AppendFormat("({0},{1})", lcm * lst[i, 0] / lst[i, 1],lcm);
             }
             return sb.ToString();
         }
