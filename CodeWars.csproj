@@ -55,6 +55,7 @@
     <Compile Include="Kata\Bit Counting\SomeCodes.cs" />
     <Compile Include="Kata\Bit Counting\MyCode.cs" />
     <Compile Include="Kata\BreakCamelCase\BreakCamelCase.cs" />
+    <Compile Include="Kata\CommonDenominators\rainingYao.cs" />
     <Compile Include="Kata\ConsecutiveStrings\ConsecutiveStrings.cs" />
     <Compile Include="Kata\Constructing a car\Car.cs" />
     <Compile Include="Kata\Count the smiley faces!\CountSmileys.cs" />

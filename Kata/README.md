@@ -16,6 +16,7 @@
 |<6 kyu> [Find the unique number]|[/Find the unique number]|
 |<7~6 kyu> **5 in 1** Genetic Algorithm Series|[/GeneticAlgorithmSeries]|
 |<5 kyu> [Binary Genetic Algorithms]|[/BinaryGeneticAlgorithms]|
+|<5 kyu> [Common Denominators]|[/CommonDenominators]|
 
 
 [Primes in numbers]: https://www.codewars.com/kata/54d512e62a5e54c96200019e
@@ -49,3 +50,5 @@
 [/GeneticAlgorithmSeries]: GeneticAlgorithmSeries
 [Binary Genetic Algorithms]: https://www.codewars.com/kata/binary-genetic-algorithms
 [/BinaryGeneticAlgorithms]: BinaryGeneticAlgorithms
+[Common Denominators]: https://www.codewars.com/kata/54d7660d2daf68c619000d95
+[/CommonDenominators]: CommonDenominators
