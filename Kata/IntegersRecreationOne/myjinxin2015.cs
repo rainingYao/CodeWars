@@ -1,4 +1,4 @@
-﻿namespace CodeWars.Kata.IntegersRecreationOne.myjinxin2015
+﻿namespace IntegersRecreationOne.myjinxin2015
 {
     using System;
     using System.Linq;

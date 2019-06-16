@@ -1,4 +1,4 @@
-﻿namespace CodeWars.Kata.CommonDenominators.rainingYao
+﻿namespace CommonDenominators.rainingYao
 {
     using System;
     using System.Collections;

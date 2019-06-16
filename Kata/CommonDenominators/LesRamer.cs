@@ -1,4 +1,4 @@
-﻿namespace CodeWars.Kata.CommonDenominators.LesRamer
+﻿namespace CommonDenominators.LesRamer
 {
     using System;
     using System.Linq;

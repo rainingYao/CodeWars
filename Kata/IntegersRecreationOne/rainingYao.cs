@@ -1,4 +1,4 @@
-﻿namespace CodeWars.Kata.IntegersRecreationOne.rainingYao
+﻿namespace IntegersRecreationOne.rainingYao
 {
     using System;
     using System.Collections.Generic;

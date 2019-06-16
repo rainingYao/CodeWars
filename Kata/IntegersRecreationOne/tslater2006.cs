@@ -1,4 +1,4 @@
-﻿namespace CodeWars.Kata.IntegersRecreationOne.tslater2006
+﻿namespace IntegersRecreationOne.tslater2006
 {
     using System;
     using System.Linq;

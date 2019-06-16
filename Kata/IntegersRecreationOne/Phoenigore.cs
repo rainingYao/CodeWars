@@ -1,4 +1,4 @@
-﻿namespace CodeWars.Kata.IntegersRecreationOne.Phoenigore
+﻿namespace IntegersRecreationOne.Phoenigore
 {
     using System;
     using System.Collections.Generic;
