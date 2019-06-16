@@ -1,10 +1,7 @@
-﻿namespace CodeWars.Kata.IntegersRecreationOne.rainingYao
+﻿namespace CodeWars.Kata.IntegersRecreationOne.tslater2006
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using NUnit.Framework;
 
     [TestFixture]
@@ -127,50 +124,9 @@
 
     public class SumSquaredDivisors
     {
-        static long max = 100000;
-        static Dictionary<long, long> dict = new Dictionary<long, long> { { 1, 1 }, { 42, 2500 }, { 246, 84100 }, { 287, 84100 }, { 728, 722500 }, { 1434, 2856100 }, { 1673, 2856100 }, { 1880, 4884100 }, { 4264, 24304900 }, { 6237, 45024100 }, { 9799, 96079204 }, { 9855, 113635600 }, { 18330, 488410000 }, { 21352, 607622500 }, { 21385, 488410000 }, { 24856, 825412900 }, { 36531, 1514610724 }, { 39990, 2313610000 }, { 46655, 2313610000 }, { 57270, 4747210000 }, { 66815, 4747210000 }, { 92664, 13011964900 } };
-
         public static string listSquared(long m, long n)
         {
-            if (n > max)
-            {
-                for (long i = max + 1; i <= n; i++)
-                {
-                    long product = 0;
-                    foreach (long divisor in GetDivisors(i))
-                    {
-                        product += divisor * divisor;
-                    }
-
-                    if (Math.Sqrt(product) == Math.Floor(Math.Sqrt(product)))
-                    {
-                        dict.Add(i, product);
-                    }
-                }
-                max = n;
-            }
-            StringBuilder sb = new StringBuilder();
-            foreach (var item in dict)
-            {
-                if (item.Key >= m && item.Key <= n)
-                {
-                    sb.Append($", [{item.Key}, {item.Value}]");
-                }
-            }
-            if (sb.Length > 2) sb.Remove(0, 2);
-            return $"[{sb.ToString()}]";
-        }
-
-        public static IEnumerable<long> GetDivisors(long number)
-        {
-            for (long i = 1L; i <= number / 2; i++)
-            {
-                if (number % i == 0)
-                {
-                    yield return i;
-                }
-            }
-            yield return number;
+            return "[" + string.Join(", ", Enumerable.Range((int)m, (int)(n - m)).Where(x => Math.Sqrt(Enumerable.Range(1, (int)Math.Sqrt(x)).Where(p => (((double)x / p) % 1) == 0).Select(p => new[] { p * p, (x / p) * (x / p) }).Sum(p => p[0] == p[1] ? p[0] : p.Sum())) % 1 == 0).Select(z => z).Zip(Enumerable.Range((int)m, (int)(n - m)).Select(x => Enumerable.Range(1, (int)Math.Sqrt(x)).Where(p => (((double)x / p) % 1) == 0).Select(p => new[] { p * p, (x / p) * (x / p) }).Sum(p => p[0] == p[1] ? p[0] : p.Sum())).Where(p => Math.Sqrt(p) % 1 == 0), (a, b) => new[] { a, b }).Select(p => "[" + p[0] + ", " + p[1] + "]").ToArray()) + "]";
         }
     }
 }

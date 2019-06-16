@@ -1,10 +1,9 @@
-﻿namespace CodeWars.Kata.IntegersRecreationOne.rainingYao
+﻿namespace CodeWars.Kata.IntegersRecreationOne.Phoenigore
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using System.Text.RegularExpressions;
     using NUnit.Framework;
 
     [TestFixture]
@@ -127,50 +126,15 @@
 
     public class SumSquaredDivisors
     {
-        static long max = 100000;
-        static Dictionary<long, long> dict = new Dictionary<long, long> { { 1, 1 }, { 42, 2500 }, { 246, 84100 }, { 287, 84100 }, { 728, 722500 }, { 1434, 2856100 }, { 1673, 2856100 }, { 1880, 4884100 }, { 4264, 24304900 }, { 6237, 45024100 }, { 9799, 96079204 }, { 9855, 113635600 }, { 18330, 488410000 }, { 21352, 607622500 }, { 21385, 488410000 }, { 24856, 825412900 }, { 36531, 1514610724 }, { 39990, 2313610000 }, { 46655, 2313610000 }, { 57270, 4747210000 }, { 66815, 4747210000 }, { 92664, 13011964900 } };
-
         public static string listSquared(long m, long n)
         {
-            if (n > max)
-            {
-                for (long i = max + 1; i <= n; i++)
-                {
-                    long product = 0;
-                    foreach (long divisor in GetDivisors(i))
-                    {
-                        product += divisor * divisor;
-                    }
+            var result = Enumerable.Range(int.Parse(m.ToString()), int.Parse((n - m).ToString()))
+                  .Select(res => new Tuple<int, double>(res, Enumerable.Range(1, res).Where(r => res % r == 0)
+                                                                  .Select(i => Math.Pow(i, 2)).Sum()))
+                  .Where(res => Regex.IsMatch(Math.Sqrt(res.Item2).ToString(), "^[0-9]*$"))
+                  .Select(tupple => string.Format("[{0}, {1}]", tupple.Item1, tupple.Item2));
 
-                    if (Math.Sqrt(product) == Math.Floor(Math.Sqrt(product)))
-                    {
-                        dict.Add(i, product);
-                    }
-                }
-                max = n;
-            }
-            StringBuilder sb = new StringBuilder();
-            foreach (var item in dict)
-            {
-                if (item.Key >= m && item.Key <= n)
-                {
-                    sb.Append($", [{item.Key}, {item.Value}]");
-                }
-            }
-            if (sb.Length > 2) sb.Remove(0, 2);
-            return $"[{sb.ToString()}]";
-        }
-
-        public static IEnumerable<long> GetDivisors(long number)
-        {
-            for (long i = 1L; i <= number / 2; i++)
-            {
-                if (number % i == 0)
-                {
-                    yield return i;
-                }
-            }
-            yield return number;
+            return string.Format("[{0}]", !result.Any() ? string.Empty : result.Aggregate((a, b) => string.Format("{0}, {1}", a, b)));
         }
     }
 }
