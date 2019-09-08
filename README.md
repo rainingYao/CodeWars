@@ -6,6 +6,18 @@
 >> I'm improving my skills on the [Codewars], challenge yourself in the [Kata] with me!
 >> This project will record the code that my little friends and I have challenged on [CodeWars].
 
+## 支持的编程语言 (现在支持Python啦)
+> Supported programming languages (Python is now supported!)
+* C# (C Sharp)
+* c++
+* Python (Python is now supported on <time>2019-9-8</time>) 
+    <details>
+        <summary>How to use Python codewars_test?</summary>
+        
+        1. git clone https://github.com/Codewars/python-test-framework.git
+        2. python setup.py install
+        3. import codewars_test as test
+    </details>
 
 [CodeWars]:https://www.codewars.com/ "CodeWars"
 [Kata]:https://www.codewars.com/kata "Kata"
