@@ -30,6 +30,7 @@ MORSE_CODE = {
     '-..-': 'X',
     '-.--': 'Y',
     '--..': 'Z',
+    '-----': '0',
     '.----': '1',
     '..---': '2',
     '...--': '3',
@@ -39,30 +40,33 @@ MORSE_CODE = {
     '--...': '7',
     '---..': '8',
     '----.': '9',
-    '-----': '0',
-    '!': ' '
+    '.-.-.-': '.',
+    '--..--': ',',
+    '..--..': '?',
+    '.----.': "'",
+    '-.-.--': '!',
+    '-..-.': '/',
+    '-.--.': '(',
+    '-.--.-': ')',
+    '.-...': '&',
+    '---...': ':',
+    '-.-.-.': ';',
+    '-...-': '=',
+    '.-.-.': '+',
+    '-....-': '-',
+    '..--.-': '_',
+    '.-..-.': '"',
+    '...-..-': '$',
+    '.--.-.': '@',
+    '...---...': 'SOS'
 }
+
+MORSE_CODE['~'] = ' '
 
 
 def decodeMorse(morse_code):
-    morse_code = morse_code.strip()
-    ans = ''
-    while len(morse_code) > 0:
-        if morse_code[0:2] == '  ':
-            morse_code = morse_code[2:]
-            ans = ans + ' '
-        elif morse_code[0] == ' ':
-            morse_code = morse_code[1:]
-        else:
-            right = morse_code.find(' ')
-            if right == -1:
-                sp = morse_code
-                morse_code = ''
-            else:
-                sp = morse_code[0:right]
-                morse_code = morse_code[right:]
-            ans = ans + MORSE_CODE[sp]
-    return ans
+    return ''.join(MORSE_CODE[c]
+                   for c in morse_code.strip().replace('  ', ' ~').split(' '))
 
 
 def test_and_print(got, expected):
@@ -79,3 +83,23 @@ test_and_print(decodeMorse('.... . -.--   .--- ..- -.. .'), 'HEY JUDE')
 
 test.describe("Your own tests")
 # Add more tests here
+
+test.describe("Basic Morse decoding")
+test_and_print(decodeMorse('.-'), 'A')
+test_and_print(decodeMorse('.'), 'E')
+test_and_print(decodeMorse('..'), 'I')
+test_and_print(decodeMorse('. .'), 'EE')
+test_and_print(decodeMorse('.   .'), 'E E')
+test_and_print(decodeMorse('...---...'), 'SOS')
+test_and_print(decodeMorse('... --- ...'), 'SOS')
+test_and_print(decodeMorse('...   ---   ...'), 'S O S')
+
+test.describe("Extra zeros handling")
+test_and_print(decodeMorse(' . '), 'E')
+test_and_print(decodeMorse('   .   . '), 'E E')
+
+test.describe("Complex tests")
+test_and_print(
+    decodeMorse(
+        '      ...---... -.-.--   - .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-  '
+    ), 'SOS! THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.')
