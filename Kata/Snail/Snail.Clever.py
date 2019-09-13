@@ -3,30 +3,8 @@
 
 import codewars_test as test
 
-def snail(snail_map):
-    s = []
-    while snail_map:
-        # top
-        s.extend(snail_map.pop(0))
-        if snail_map:
-            # right
-            for x in snail_map:
-                s.append(x.pop())
-            # bottom
-            s.extend(snail_map.pop()[::-1])
-            if snail_map:
-                # left
-                l = []
-                for x in snail_map:
-                    l.append(x.pop(0))
-                s.extend(l[::-1])
-    return s
-
-array = [[1,2,3],
-         [4,5,6],
-         [7,8,9]]
-expected = [1,2,3,6,9,8,7,4,5]
-test.assert_equals(snail(array), expected)
+def snail(array):
+    return list(array[0]) + snail(list(zip(*array[1:]))[::-1]) if array else []
 
 @test.describe("Fixed tests")
 def fixed_tests():
