@@ -58,6 +58,6 @@
 [Integers: Recreation One]: https://www.codewars.com/kata/integers-recreation-one
 [/IntegersRecreationOne]:IntegersRecreationOne
 [Prime Streaming (PG-13)]: https://www.codewars.com/kata/5519a584a73e70fa570005f5
-[/Prime Streaming (PG-13)]:/Prime%20Streaming%20(PG-13)
+[/Prime Streaming (PG-13)]:Prime%20Streaming%20(PG-13)
 [Getting along with Integer Partitions]: https://www.codewars.com/kata/55cf3b567fc0e02b0b00000b
-[/Getting along with Integer Partitions]:/Getting%20along%20with%20Integer%20Partitions
+[/Getting along with Integer Partitions]:Getting%20along%20with%20Integer%20Partitions
