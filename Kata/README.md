@@ -18,6 +18,8 @@
 |<5 kyu> [Binary Genetic Algorithms]|[/BinaryGeneticAlgorithms]|
 |<5 kyu> [Common Denominators]|[/CommonDenominators]|
 |<5 kyu> [Integers: Recreation One]|[/IntegersRecreationOne]|
+|<3 kyu> [Prime Streaming (PG-13)]|[/Prime Streaming (PG-13)]|
+|<4 kyu> [Getting along with Integer Partitions]|[/Getting along with Integer Partitions]|
 
 
 [Primes in numbers]: https://www.codewars.com/kata/54d512e62a5e54c96200019e
@@ -55,3 +57,7 @@
 [/CommonDenominators]: CommonDenominators
 [Integers: Recreation One]: https://www.codewars.com/kata/integers-recreation-one
 [/IntegersRecreationOne]:IntegersRecreationOne
+[Prime Streaming (PG-13)]: https://www.codewars.com/kata/5519a584a73e70fa570005f5
+[/Prime Streaming (PG-13)]:/Prime%20Streaming%20(PG-13)
+[Getting along with Integer Partitions]: https://www.codewars.com/kata/55cf3b567fc0e02b0b00000b
+[/Getting along with Integer Partitions]:/Getting%20along%20with%20Integer%20Partitions
