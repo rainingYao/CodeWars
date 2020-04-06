@@ -20,6 +20,7 @@
 |<5 kyu> [Integers: Recreation One]|[/IntegersRecreationOne]|
 |<3 kyu> [Prime Streaming (PG-13)]|[/Prime Streaming (PG-13)]|
 |<4 kyu> [Getting along with Integer Partitions]|[/Getting along with Integer Partitions]|
+|<4 kyu> [Pyramid Slide Down]|[/Pyramid Slide Down]|
 
 
 [Primes in numbers]: https://www.codewars.com/kata/54d512e62a5e54c96200019e
@@ -61,3 +62,5 @@
 [/Prime Streaming (PG-13)]:Prime%20Streaming%20(PG-13)
 [Getting along with Integer Partitions]: https://www.codewars.com/kata/55cf3b567fc0e02b0b00000b
 [/Getting along with Integer Partitions]:Getting%20along%20with%20Integer%20Partitions
+[Pyramid Slide Down]: https://www.codewars.com/kata/551f23362ff852e2ab000037
+[/Pyramid Slide Down]: Pyramid%20Slide%20Down
