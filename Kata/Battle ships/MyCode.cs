@@ -66,9 +66,7 @@
             Assert.AreEqual(0, result["points"]);
         }
 
-        [TestCase]
-        [TestCase]
-        [TestCase]
+        [TestCase, Repeat(10)]
         public void RandomTest()
         {
             var kata = new Kata();
@@ -76,7 +74,7 @@
             int zyc = ran.Next(5, 8);
             int[,] board = board_maker(zxc, zyc);
             Console.WriteLine("Game Board");
-            for (int a=0; a < board.GetLength(0); a++)
+            for (int a = 0; a < board.GetLength(0); a++)
             {
                 for (int b = 0; b < board.GetLength(1); b++)
                 {
@@ -85,33 +83,34 @@
                 Console.WriteLine(Environment.NewLine);
             }
 
-            int[,] attacks = attack_maker(zxc,zyc);
+            int[,] attacks = attack_maker(zxc, zyc);
             Console.WriteLine("Attacks");
-            for(int a = 0; a < attacks.GetLength(0); a++)
+            for (int a = 0; a < attacks.GetLength(0); a++)
             {
                 Console.Write("(" + attacks[a, 0] + ", " + attacks[a, 1] + ") ");
             }
             Console.WriteLine(Environment.NewLine);
             var solution = damagedOrSunkCheck(board, attacks);
             var result = Kata.damagedOrSunk(board, attacks);
-            Console.WriteLine("Random Test - sunk = "+ solution["sunk"]+", damaged = "+ solution["damaged"]+", notTouched = "+ solution["notTouched"]+", points = "+ solution["points"]);
+            Console.WriteLine("Random Test expected - sunk = " + solution["sunk"] + ", damaged = " + solution["damaged"] + ", notTouched = " + solution["notTouched"] + ", points = " + solution["points"]);
+            Console.WriteLine("Random Test actual   - sunk = " + result["sunk"] + ", damaged = " + result["damaged"] + ", notTouched = " + result["notTouched"] + ", points = " + result["points"]);
             Assert.AreEqual(solution["sunk"], result["sunk"]);
             Assert.AreEqual(solution["damaged"], result["damaged"]);
             Assert.AreEqual(solution["notTouched"], result["notTouched"]);
             Assert.AreEqual(solution["points"], result["points"]);
         }
 
-        private int[,] board_maker(int zx, int zy)
+        private int[,] board_maker(int zy, int zx)
         {
             int[,] board = new int[zx, zy];
-            for (int za=0; za<zx; za++)
+            for (int za = 0; za < zx; za++)
             {
-                for (int zb=0; zb<zy; zb++)
+                for (int zb = 0; zb < zy; zb++)
                 {
-                    board[za,zb] = 0;
+                    board[za, zb] = 0;
                 }
             }
-            for (int za=1; za<=ran.Next(2,4); za++)
+            for (int za = 1; za <= ran.Next(2, 4); za++)
             {
                 int zcount = 0;
                 int zsize = 10;
@@ -125,7 +124,7 @@
                     zdirection = ran.Next(1, 3);
                     zxc = ran.Next(0, (zx - 1));
                     zyc = ran.Next(0, (zy - 1));
-                    for (int zb=0; zb<=zsize; zb++)
+                    for (int zb = 0; zb <= zsize; zb++)
                     {
                         if (zdirection == 1)
                         {
@@ -137,7 +136,7 @@
                         }
                     }
                 }
-                for (int zb=0; zb < zsize; zb++)
+                for (int zb = 0; zb < zsize; zb++)
                 {
                     if (zdirection == 1) { board[zxc + zb, zyc] = za; } else { board[zxc, zyc + zb] = za; }
                 }
@@ -148,20 +147,20 @@
         private int[,] attack_maker(int zx, int zy)
         {
             int amount = ran.Next(2, 11);
-            int[,] attack = new int[amount, amount];
-            for (int zz=0; zz<amount; zz++)
+            int[,] attack = new int[amount, 2];
+            for (int zz = 0; zz < amount; zz++)
             {
                 bool pos = true;
                 int zxc = 0;
                 int zyc = 0;
                 while (pos)
                 {
-                    zxc = ran.Next(1, zx - 2);
-                    zyc = ran.Next(1, zy - 2);
+                    zxc = ran.Next(1, zx);
+                    zyc = ran.Next(1, zy);
                     pos = false;
-                    for (int check=0; check < zz; check++)
+                    for (int check = 0; check < zz; check++)
                     {
-                        if (attack[check,0] == zxc && attack[check,1] == zyc) { pos = true; }
+                        if (attack[check, 0] == zxc && attack[check, 1] == zyc) { pos = true; }
                     }
                 }
                 attack[zz, 0] = zxc;
@@ -216,6 +215,7 @@
         public static Dictionary<string, double> damagedOrSunk(int[,] board, int[,] attacks)
         {
             int sum = board.Cast<int>().Max();
+            int unused = sum - board.Cast<int>().Distinct().Where(n => n > 0).Count();
             int[] a = new int[sum];
             int[] b = new int[sum];
             for (int i = 0; i < board.GetLength(0); i++)
@@ -226,7 +226,7 @@
                 int ship = board[board.GetLength(0) - attacks[i, 1], attacks[i, 0] - 1];
                 if (ship > 0) b[ship - 1]++;
             }
-            int sunk = 0, damaged = 0, notTouched = 0;
+            int sunk = 0, damaged = 0, notTouched = 0 - unused;
             for (int i = 0; i < sum; i++)
                 if (b[i] == 0) notTouched++;
                 else if (b[i] == a[i]) sunk++;

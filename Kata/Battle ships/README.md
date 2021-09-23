@@ -86,4 +86,4 @@ Dictionary<string, double> { {"sunk", 0}, {"damaged", 2}, {"notTouched", 1}, {"p
 
 
 
-[Battle ships: Sunk damaged or not touched?]: https://www.codewars.com/kata/578b4f9b7c77f535fc00002f
+[Battle ships: Sunk damaged or not touched?]: https://www.codewars.com/kata/58d06bfbc43d20767e000074
